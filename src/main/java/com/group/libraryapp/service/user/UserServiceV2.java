@@ -23,7 +23,6 @@ public class UserServiceV2 {
     @Transactional
     public void saveUser(UserCreateRequest request) {
         User u = userRepository.save(new User(request.getName(), request.getAge()));
-        throw new IllegalArgumentException();
     }
 
     @Transactional(readOnly = true)
