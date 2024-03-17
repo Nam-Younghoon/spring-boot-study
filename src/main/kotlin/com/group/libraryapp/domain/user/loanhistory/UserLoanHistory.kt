@@ -1,15 +1,11 @@
 package com.group.libraryapp.domain.user.loanhistory
 
 import com.group.libraryapp.domain.user.User
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.ManyToOne
+import javax.persistence.*
 
 @Entity
 class UserLoanHistory(
-    @ManyToOne
+    @ManyToOne()
     val user: User,
 
     val bookName: String,
